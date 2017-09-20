@@ -1,0 +1,8 @@
+*
+!.gitignore
+
+!PKGBUILD
+!ripcord.desktop
+!ripcord.png
+!ripcord.sh
+!README.md
