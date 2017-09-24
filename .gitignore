@@ -2,6 +2,7 @@
 !.gitignore
 
 !PKGBUILD
+!.SRCINFO
 !ripcord.desktop
 !ripcord.png
 !ripcord.sh

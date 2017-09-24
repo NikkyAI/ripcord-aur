@@ -1,6 +1,6 @@
 # Maintainer: NikkyAI <root@nikky.moe>
 pkgname=ripcord-bin # '-bzr', '-git', '-hg' or '-svn'
-pkgver=0.2.17
+pkgver=0.2.18
 pkgrel=1
 pkgdesc=""
 arch=( 'x86_64' )
@@ -24,7 +24,9 @@ source=(
 	ripcord.png
 )
 noextract=()
-md5sums=('SKIP' 'SKIP' 'SKIP')
+md5sums=('SKIP'
+	'SKIP'
+	'SKIP')
 
 util() {
     if [ ! -f bucket.xml ]; then
@@ -75,6 +77,9 @@ pkgver() {
 prepare() {
 	echo "$srcdir"
 	echo ""
+	if [ -f bucket.xml ]; then
+        rm bucket.xml
+    fi
 
 	source <(util url file filename)
 	if [ ! -f $RC_FILE ]; then
